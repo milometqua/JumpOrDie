@@ -33,14 +33,14 @@ public class Player : MonoBehaviour
         canJump = true;
         jumpForce = 2;
         perfect = false;
-        GameController.Instance.OnTap();
+        UIManager.Instance.OnTap();
     }
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && canJump && !UIHelper.IsMouseOverUI())
         {
-            GameController.Instance.OffTap();
+            UIManager.Instance.OffTap();
             AudioManager.Instance.PlaySFX(AudioManager.Instance.jump);
             rb.velocity = Vector2.up * jumpForce;
             SetParentNull();
@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
                 if (perfect)
                 {
                     ScoreManager.AddScore(4);
-                    GameController.Instance.OnPerfect();
+                    UIManager.Instance.OnPerfect();
                 }
                 else ScoreManager.AddScore(2);
             }
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
                 if (perfect)
                 {
                     ScoreManager.AddScore(2);
-                    GameController.Instance.OnPerfect();
+                    UIManager.Instance.OnPerfect();
                 }
                 else ScoreManager.AddScore(1);
             }
@@ -105,7 +105,8 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         perfect = false;
-        GameController.Instance.OffPerfect();
+        UIManager.Instance.OffPerfect();
+        /*GameController.Instance.OffPerfect();*/
     }
     public void SetParentNull()
     {

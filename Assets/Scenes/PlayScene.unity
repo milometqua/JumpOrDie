@@ -883,9 +883,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  perfect: {fileID: 526625814}
-  taptap: {fileID: 11743767}
-  countdown: {fileID: 297172807}
 --- !u!4 &466254167
 Transform:
   m_ObjectHideFlags: 0
@@ -2102,6 +2099,7 @@ GameObject:
   - component: {fileID: 2061392082}
   - component: {fileID: 2061392081}
   - component: {fileID: 2061392080}
+  - component: {fileID: 2061392084}
   m_Layer: 5
   m_Name: CanvasUI
   m_TagString: Untagged
@@ -2195,6 +2193,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2061392084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061392079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256cfbfa70708a24fa257c914eaffeef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  perfect: {fileID: 526625814}
+  taptap: {fileID: 11743767}
+  countdown: {fileID: 297172807}
 --- !u!1 &2078488552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5242346115003466703, guid: e749ec36712fbee4c9e9e7d326da80cd, type: 3}

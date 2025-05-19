@@ -56,7 +56,8 @@ public class PausePanel : Panel
 
     public void ContinueGame()
     {
-        GameController.Instance.ContinueGame();
+        /*GameController.Instance.ContinueGame();*/
+        UIManager.Instance.ContinueGame();
         PanelManager.Instance.CloseAll();
         //StartCoroutine(Countdown());
         //Time.timeScale = 1.0f;

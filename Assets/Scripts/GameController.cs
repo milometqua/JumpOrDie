@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class GameController : Singleton <GameController>
 {
-    public GameObject perfect;
+    /*public GameObject perfect;
     public GameObject taptap;
     public GameObject countdown;
 
-    private Animator animatorCountdown;
+    private Animator animatorCountdown;*/
 
     private void Start()
     {
         Time.timeScale = 1.0f;
         Application.targetFrameRate = 60;
-        OffCountdown();
+        /*OffCountdown();
         OffPerfect();
-        animatorCountdown = countdown.GetComponent<Animator>();
+        animatorCountdown = countdown.GetComponent<Animator>();*/
     }
 
     public void PauseGame()
@@ -27,7 +27,7 @@ public class GameController : Singleton <GameController>
         PanelManager.Instance.OpenPanel("PausePanel");
     }
 
-    public void ContinueGame()
+    /*public void ContinueGame()
     {
         StartCoroutine(Countdown());
     }
@@ -40,7 +40,7 @@ public class GameController : Singleton <GameController>
         yield return new WaitForSecondsRealtime(3f);
         Time.timeScale = 1.0f;
         OffCountdown();
-    }
+    }*/
     public void EndGame()
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.gameOver);
@@ -79,7 +79,7 @@ public class GameController : Singleton <GameController>
         ScoreManager.Score = 0;
     }
 
-    public void OnPerfect()
+    /*public void OnPerfect()
     {
         perfect.SetActive(true);
     }
@@ -107,5 +107,5 @@ public class GameController : Singleton <GameController>
     public void OffCountdown()
     {
         countdown.SetActive(false);
-    }
+    }*/
 }
